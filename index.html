@@ -104,13 +104,28 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  padding: 18px 24px;
+  padding: 16px 20px; /* Немного уменьшили внутренние отступы для баланса с логотипом */
   border-radius: 20px;
   text-decoration: none;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   font-size: 17px;
+}
+
+/* Правая часть кнопки: группирует текст-секрет и логотип */
+.link-right-content {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Расстояние между текстом и логотипом */
+}
+
+/* Стили для фото-логотипов */
+.btn-logo {
+  height: 24px; /* Оптимальная высота логотипа */
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px; /* Мягкое скругление для квадратных логотипов */
 }
 
 /* Главная кнопка Fanvue (теперь с голубо-синей подсветкой) */
@@ -259,15 +274,24 @@ h1 {
   <h1>Artem</h1>
   <p class="sub">exclusive content • personal moments</p>
 
-  <!-- Добавил недостающий id="fanvueLink" -->
+  <!-- Кнопка Fanvue / OnlyFans -->
   <a class="link link-fanvue" id="fanvueLink" href="https://onlyfans.com/pianotemka">
-    <span>My Page</span>
-    <span class="small">my little secret 🤍</span>
+    <span>OnlyFans</span>
+    <span class="link-right-content">
+      <span class="small">my exclusive content 🤍</span>
+      <!-- Замени "onlyfans-logo.png" на реальный путь к файлу логотипа -->
+      <img src="onlyfans-logo.png" alt="OnlyFans Logo" class="btn-logo">
+    </span>
   </a>
 
+  <!-- Кнопка Telegram -->
   <a class="link link-telegram" href="">
     <span>Telegram</span>
-    <span class="small">my private group 💗</span>
+    <span class="link-right-content">
+      <span class="small">my private group 💗</span>
+      <!-- Замени "telegram-logo.png" на реальный путь к файлу логотипа -->
+      <img src="telegram-logo.png" alt="Telegram Logo" class="btn-logo">
+    </span>
   </a>
 
 </div>
